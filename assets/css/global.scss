@@ -1,0 +1,32 @@
+.btn-animate {
+  position: relative;
+  width: 130px;
+  height: 40px;
+  line-height: 40px;
+  border: none;
+  border-radius: 5px;
+  background: #eeece1;
+  color: #000000;
+  text-align: center;
+}
+
+.btn-animate__underline-from-center {
+  &::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    z-index: 1;
+    height: 4px;
+    background-color: #f9974c;
+    transition: .3s ease-out;
+  }
+
+  &:hover {
+    &::before {
+      left: 0;
+      right: 0;
+    }
+  }
+}
