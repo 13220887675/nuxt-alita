@@ -115,7 +115,7 @@
       align-content: space-around
     }
     .card-type, .card-type-once {
-      width: 80%;
+      /* width: 80%; */
       padding: 8% 15% 2% 15%;
     }
   }
