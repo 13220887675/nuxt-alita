@@ -5,37 +5,32 @@
 
       </div>
       <div class="color">
-        <div class="once-course">
-          <div class="card-type">
-            <h3>季卡</h3>
-            <p>价格: 19800元</p>
-            <p>有效期: 90天</p>
-            <br>
-          </div>
-          <div class="card-type">
-            <h3>半年卡</h3>
-            <p>价格: 36980元</p>
-            <p>有效期: 180天</p>
-            <br>
-          </div>
-          <div class="card-type">
-            <h3>一年卡</h3>
-            <p>价格: 66666元</p>
-            <p>有效期: 365天</p>
-            <br>
-          </div>
+        <div class="card-type">
+          <h3>季卡</h3>
+          <p>价格: 19800元</p>
+          <p>有效期: 90天</p>
+          <br>
         </div>
+        <div class="card-type">
+          <h3>半年卡</h3>
+          <p>价格: 36980元</p>
+          <p>有效期: 180天</p>
+          <br>
+        </div>
+        <div class="card-type">
+          <h3>一年卡</h3>
+          <p>价格: 66666元</p>
+          <p>有效期: 365天</p>
+          <br>
+        </div>
+        <div class="card-type-once">
+          <h3>次卡</h3>
+          <p>次数: 12次</p>
+          <p>价格: 5616元</p>
+          <p>有效期: 60天</p>
+        </div>
+        <div class="card-type-no loader"></div>
 
-        <div class="times-course">
-          <div class="card-type-times">
-            <h3>次卡</h3>
-            <p>次数: 12次</p>
-            <p>价格: 5616元</p>
-            <p>有效期: 60天</p>
-          </div>
-          <div class="card-type-no loader"><h3></h3></div>
-          <div></div>
-        </div>
       </div>
   
     </div>
@@ -67,44 +62,37 @@
   }
   .products {
     position: relative;
-    display: flex;
-    flex-direction: column;   /* 将子元素设为纵向排列 */
-    justify-content: space-between;  /* 子元素纵向平均分配空间 */
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
     background-image: url('assets/images/once-course.jpg');
     background-size: cover; /* 背景图片铺满整个div */
     background-repeat: no-repeat; /* 不重复 */
-    width: 100%; /* 设置div宽度为100% */
-    height: 100vh; /* 设置div高度为300像素，你可以根据需要调整高度 */
+    background-position: center;
+    height: 120vh; /* 设置div高度为300像素，你可以根据需要调整高度 */
   }
-  .blank, .color {
-    flex: 1; /* Each child takes equal space */
-    display: flex;
-    width: 100vw;
-    height: 50%;
-  }
+
   .color {
     background-color: rgba(0, 0, 0, 0.5);
-  }
-  .once-course, .times-course {
-    position: relative;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+    grid-template-rows: 1fr;
+    /* grid-column-gap: 10px;*/
+    justify-content: space-evenly; 
     align-items: center;
-    justify-content: center; /* 让内容水平居中 */
-    width: 100%;
-    height: 100%;
-    flex: 1; /* Each child takes equal space */
-    color: white;
   }
-  .card-type, .card-type-times {
-    margin: 10px; /* 添加上下左右的内边距为10px，或者根据需要调整 */
+  .card-type, .card-type-once {
     border: 1px solid orange; /* 添加1像素实心橘黄色边框 */
     border-radius: 5px; /* 圆角半径为5px */
-    padding: 8px;
+    padding: 5px;
+    margin: 8px;
     transition: transform 0.3s ease;
   }
-  .card-type:hover, .card-type-times:hover {
-  transform: scale(1.1); /* 悬停时将元素放大到110% */
+  .card-type-once {
+    border: 1px solid rgb(8, 64, 250);
+  }
+  .card-type:hover, .card-type-once:hover  {
+  transform: scale(1.3); /* 悬停时将元素放大到110% */
 }
   .card-type-no{
     margin: 10px; /* 添加上下左右的内边距为10px，或者根据需要调整 */
@@ -112,9 +100,23 @@
     color:orange;
   }
   h3 {
-    font-size: 16px;
+    font-size: 100%;
     font-weight: bold;
-    margin-bottom: 10px;
     color: orange; /* 设置橙色 */
+  }
+  p {
+    font-size: 90%;
+    color: white; /* 设置白色 */
+  }
+  @media (max-width: 768px) {
+    .color {
+      grid-template-columns: auto;
+      grid-template-rows: auto;
+      align-content: space-around
+    }
+    .card-type, .card-type-once {
+      width: 80%;
+      padding: 8% 15% 2% 15%;
+    }
   }
 </style>

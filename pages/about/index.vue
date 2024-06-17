@@ -20,7 +20,10 @@
       </div>
       <el-divider content-position="right" class="color-line"><span class="line-content" style="color: rgb(151, 61, 1);">ALITA普拉提</span></el-divider>
       <div class="Pilates-introduce">
-        <div class="Pilates-introduce-content">
+        <div class="Pilates-introduce-img grid-img2">
+            <img src="assets/images/about-2.jpg" alt="Joseph" title="Joseph Pilates">
+        </div>
+        <div class="Pilates-introduce-content grid-content2">
           <h1 class="text-3xl font-bold mb-8 mt-11" style="text-align: right;">适用人群</h1>
           <div class="border" style="border-color: rgb(151, 61, 1);">
             <p class="text-base leading-relaxed  ml-4 mr-4 mt-4 text-left" style="text-indent: 2em;">
@@ -31,10 +34,8 @@
             <p class="text-base leading-relaxed ml-4 mr-4 mb-4 text-left" style="text-indent: 2em;">
               它能帮助提高核心稳定性、改善身体姿态、减少背痛、提高平衡能力和灵活性。特别是对于老年人和有特殊健康状况的人，普拉提的低冲击性使其成为理想选择。
             </p>
+
           </div>
-        </div>
-        <div class="Pilates-introduce-img">
-          <img src="assets/images/about-2.jpg" alt="Joseph" title="Joseph Pilates">
         </div>
       </div>
       <el-divider content-position="left"><p class="line-content" style="color: rgb(151, 61, 1);">ALITA普拉提</p></el-divider>
@@ -77,29 +78,25 @@
   background-color: rgba(0, 0, 0, 0.1);
 } */
 .content-body {
-  margin: 0 auto;
-  width: 95%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, auto);
+  margin: 5px;
 }
 .Pilates-introduce {
-  position: relative;
-  display: flex;
-  height: 500px;
-  width: 100%;
-  margin-right: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  place-items: center;
 }
-.Pilates-introduce-img {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 .Pilates-introduce-img img {
-  margin: 20px 0 20px 20px;
-  max-width: 100%;
   width: 500px;
+  height: 300px;
+  object-fit: cover;
 }
 
 .Pilates-introduce-content {
-  flex: 6;
   padding: 60px;
 }
 h1 {
@@ -117,5 +114,23 @@ h1 {
   .divider .text {
     color: red;
     padding: 0 5px;
+  }
+  @media (min-width: 768px) {
+    .grid-img2 {
+      order: 2;
+    }
+    .grid-content2 {
+      order: 1;
+    }
+  }
+  @media (max-width: 768px) {
+    .content-body{
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(2, auto);
+    }
+    .Pilates-introduce {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto  auto;
+    }
   }
 </style>

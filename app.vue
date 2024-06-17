@@ -13,34 +13,6 @@
       <nuxt-page />
     </div>
   </div>
-  <!-- <el-menu 
-  :default-active="activeIndex"
-  class="el-menu-demo"
-  mode="horizontal"
-  :ellipsis="false" 
-  :style="{ 
-  background: 'linear-gradient(to right, rgba(255, 165, 0, 0.1), rgba(255, 165, 0, 1))' 
-  }"
-  >
-
-    <img
-    style="width: 100px; pointer-events: none;user-select:none ;" 
-    src="~assets/images/logo.png"
-    alt="Element logo"
-    @click.stop
-    />
-    
-
-    <div class="flex-grow" />
-    <el-menu-item index="1" class="font-bold">
-      <NuxtLink to="/">Home</NuxtLink></el-menu-item>
-    <el-menu-item index="2" class="font-bold">
-      <NuxtLink to="/about">About</NuxtLink></el-menu-item>
-    <el-menu-item index="3" class="font-bold">
-      <NuxtLink to="/products" class="btn">Products</NuxtLink></el-menu-item>
-  </el-menu>
-
-  <nuxt-page /> -->
 
 </template>
 <script>
@@ -108,27 +80,28 @@ li:hover {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* 滚动时添加阴影效果 */
 }
 /* 使用自定义CSS来固定导航 */
-@media (min-width: 640px) {
-  .fixed-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 999;
-  }
-  .content {
-    padding-top: 80px; /* 顶部的高度 */
-  }
-  ul{
-    position: absolute;
-    right: 5vw;
-    top: 0;
-    line-height: 80px;
-  }
-  li{
-    display: inline-block;
-    margin-right: 4vw; /* vw是视窗宽度的百分比，px像素 */
-    user-select: none;
-  }  
+ 
+.fixed-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+.content {
+  padding-top: 80px; /* 顶部的高度 */
+}
+ul{
+  position: absolute;
+  right: 5vw;
+  top: 0;
+  line-height: 80px;
+}
+li{
+  display: inline-block;
+  margin-right: 4vw; /* vw是视窗宽度的百分比，px像素 */
+  user-select: none;
+}  
+@media (max-width: 768px) {
 }
 </style>

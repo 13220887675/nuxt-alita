@@ -31,32 +31,32 @@
 <style scoped>
 .section-share {
   background-color: rgb(151, 61, 1);
-  height: 20vh;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;;
-  
+  /* height: 20vh; */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  align-items: center;  
+  padding: 20px;
 }
 .addr {
-    display: flex;
-    margin-left: 25%; /* 可以根据需要调整顶部边距 */
+    display: grid;
+    grid-template-columns: 100px auto;
+    grid-template-rows: auto;
+    gap:5px;
+    padding: 2px;
 }
 .addr p {
-    margin-left: 10px; /* 右侧间距 使用%会自动换行 */
     margin-top: 25px;
     color: white;
 }
-.addr p a {
-    text-decoration: none; /* 去除下划线 */
-    color: inherit; /* 继承父元素的颜色 */
-}
+/* .addr p a {
+    text-decoration: none; 去除下划线
+    color: inherit; 继承父元素的颜色
+} */
 .addr p a:hover {
     text-decoration: underline; /* 鼠标悬停时添加下划线 */
 }
-.addr img {
-    width: 100px;
-    height: 100px;
-}
+
 .visually-hidden {
     display: none;
 }
@@ -70,5 +70,12 @@
 }
 .social-link {
     color:white;
+}
+@media (max-width: 768px) {
+  .section-share {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
 }
 </style>
