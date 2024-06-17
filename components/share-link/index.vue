@@ -76,6 +76,8 @@
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
   }
-
+  .addr p {
+    margin-top: 5px;
+}
 }
 </style>

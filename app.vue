@@ -103,5 +103,8 @@ li{
   user-select: none;
 }  
 @media (max-width: 768px) {
+  h1 {
+    background-size: 50%; 
+  }
 }
 </style>
