@@ -74,9 +74,10 @@
   })
 </script>
 <style scoped>
-/* .container-all {
-  background-color: rgba(0, 0, 0, 0.1);
-} */
+  .container-all {
+    position: absolute; /* 或者使用 absolute，取决于具体布局需求 */
+    width: 100%; 
+  }
 .content-body {
   display: grid;
   grid-template-columns: 1fr;
