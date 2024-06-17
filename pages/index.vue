@@ -123,6 +123,7 @@
   line-height: 2;
 }
 .video-content p {
+  font-size: 16px;
   line-height: 2;
 }
 
@@ -148,6 +149,9 @@
   .video-container,.video-content { 
     margin: 5%; 
     text-align: center;
+  }
+  .video-content p {
+    font-size: 14px;
   }
 }
 </style>
