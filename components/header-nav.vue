@@ -14,7 +14,7 @@
 		</ul>
 		<!-- 移动端 -->
 		<ul class="nav-m" :class="{'collapse':!isCollapse}">
-			<NuxtImg src="assets/images/animal-pilates.png" alt="logo" class="logo-img" />
+			<nuxt-img src="/_img/animal-pilates.png" alt="logo" class="logo-img" /> <!-- 使用NuxtImg，路径必须在public下，坑死了 -->
 			<li>
 				<router-link :to="localPath('/')" @click="isCollapse = false" >ALITA</router-link>
 			</li>
