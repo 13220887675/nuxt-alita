@@ -67,8 +67,8 @@
   grid-template-columns: 5fr 3fr;
   grid-template-rows: repeat(1, 5fr) repeat(3, 1fr);
   background-image: url('assets/images/home/index.png');
-  background-size: cover; /* 初始大小 */
-  background-position: center;
+  background-size: cover;
+  background-position: center 25%; /* 设置背景图片位置向顶部移动25%*/
   background-repeat: no-repeat; /* 背景图片不重复 */
 }
 
@@ -154,4 +154,10 @@
     font-size: 14px;
   }
 }
-</style>
+/* 使用媒体查询来调整行的高度 */
+@media (min-width: 1600px) {
+  .pilates-people {
+    grid-template-rows: repeat(1, 12fr) repeat(3, 1fr);
+  }
+}
+</style>  
