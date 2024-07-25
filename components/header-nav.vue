@@ -16,13 +16,13 @@
 		<ul class="nav-m" :class="{'collapse':!isCollapse}">
 			<img src="assets/images/animal-pilates.png" alt="logo" class="logo-img">
 			<li>
-				<router-link :to="localPath('/')" @click="isCollapse = true" >ALITA</router-link>
+				<router-link :to="localPath('/')" @click="isCollapse = false" >ALITA</router-link>
 			</li>
 			<li>
-				<router-link :to="localPath('/about')" @click="isCollapse = true" >{{ $t('about_pilates') }}</router-link>
+				<router-link :to="localPath('/about')" @click="isCollapse = false" >{{ $t('about_pilates') }}</router-link>
 			</li>
 			<li>
-				<router-link :to="localPath('/products')" @click="isCollapse = true" >{{ $t('products_intro') }}</router-link>
+				<router-link :to="localPath('/products')" @click="isCollapse = false" >{{ $t('products_intro') }}</router-link>
 			</li>
 		</ul>
 		<button @click="isCollapse = !isCollapse">
@@ -35,8 +35,7 @@
 
 	const localPath = useLocalePath();
 	const route = useRoute()
-	const isCollapse = ref(true)
-
+	const isCollapse = ref(false)
 	const routePath = ref('')
 	watch(() => route.path, (path) => {
 		routePath.value = path
@@ -96,7 +95,7 @@
 		}
 	}
 		.nav-m.collapse {
-		max-height: 0px; // 根据实际内容高度调整
+		max-height: 0; // 根据实际内容高度调整
 	}
 .nav-bar {
 	.nav-m {
